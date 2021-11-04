@@ -18,32 +18,32 @@
     <div class="container">
         <div class="left">
             <div class="company-logo"><img src="image/company-logo.jpg" alt=""></div>
-            <ul>
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="computer.html">Computer</a></li>
-                <li><a href="projector.html">Projector</a></li>
-                <li><a href="tv.html">TV</a></li>
-                <li><a href="printer.html">Printer</a></li>
-                <li><a href="copier.html">Copier</a></li>
-                <li><a href="rice_cooker.html">Rice Cooker</a></li>
-                <li><a href="dish_washer.html">Dishwasher</a></li>
-                <li><a href="refrigerator.html">Refrigerator</a></li>
-                <li><a href="air_conditioner.html">Air Conditioner</a></li>
-                <li><a href="iron.html">Iron</a></li>
+            <ul> 
+                <li  class="active"><i class="fal fa-tachometer-slowest"></i><a  href="index.html">Dashboard</a></li> 
+                <li><i class="fal fa-laptop"></i><a href="computer.html">Computer</a></li> 
+                <li><i class="fal fa-chalkboard"></i><a href="projector.html">Projector</a></li> 
+                <li><i class="fal fa-tv"></i><a href="tv.html">TV</a></li> 
+                <li><i class="fal fa-print"></i><a href="printer.html">Printer</a></li> 
+                <li><i class="fal fa-copy"></i><a href="copier.html">Copier</a></li> 
+                <li><i class="fal fa-cauldron"></i><a href="rice_cooker.html">Rice Cooker</a></li> 
+                <li><i class="fal fa-compact-disc"></i><a href="dish_washer.html">Dishwasher</a></li> 
+                <li><i class="fal fa-temperature-low"></i><a href="refrigerator.html">refrigerator</a></li> 
+                <li><i class="fal fa-fan"></i><a href="air_conditioner.html">Air Conditioning</a></li> 
+                <li><i class="fal fa-hot-tub"></i><a href="iron.html">Iron</a></li> 
             </ul>
         </div>
         <div class="right">
             <div class="top-bar-dashboard">
                 <form action="">
-                    <input type="search" name="" id="input-search" placeholder="Search">
+                    <input type="text" name="" id="input-search" placeholder="Search">
                     <i class="fas fa-search" id="icon-search"></i>
                 </form>
-                <a href="">Logout</a>
+                <a href="" class="logout">Logout</a>
             </div>
             <h1 class="title">Dashboard</h1>
             <div class="top-stock">
                 <div class="total">
-                    <h2>Total 60</h2>
+                    <h2>Total 53</h2>
                 </div>
                 <div class="quote">
                     <h2>Inventory Management System</h2>
@@ -55,7 +55,7 @@
                     <div class="right">
                         Computer
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -63,7 +63,7 @@
                     <div class="right">
                         Projector
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -71,7 +71,7 @@
                     <div class="right">
                         TV
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -79,7 +79,7 @@
                     <div class="right">
                         Printer
                         <br><br>
-                        14
+                        6
                     </div>
                 </div>
                 <div class="one-item">
@@ -87,7 +87,7 @@
                     <div class="right">
                         Copier
                         <br><br>
-                        14
+                        7
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                     <div class="right">
                         Rice Cooker
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -105,7 +105,7 @@
                     <div class="right">
                         Dishwasher
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -113,7 +113,7 @@
                     <div class="right">
                         Refrigerator
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -121,7 +121,7 @@
                     <div class="right">
                         Air Conditioner
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
                 <div class="one-item">
@@ -129,15 +129,56 @@
                     <div class="right">
                         Iron
                         <br><br>
-                        14
+                        5
                     </div>
                 </div>
             </div>
-            <div class="dashboard-bg">
+            <!-- <div class="dashboard-bg">
                 <img src="image/dashboard-bg.jpg" alt="">
+            </div> -->
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="image/slideshow1.jpg" style="width:100%">
+                </div>
+        
+                <div class="mySlides fade">
+                    <img src="image/slideshow2.jpg" style="width:100%">
+                </div>
+        
+                <div class="mySlides fade">
+                    <img src="image/slideshow3.jpg" style="width:100%">
+                </div>
+        
+                <a class="prev" onclick="plusSlides(-1)">&#9664;</a>
+                <a class="next" onclick="plusSlides(1)">&#9658;</a>
+        
             </div>
         </div>
     </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
