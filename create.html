@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .form-table{
+            width: 100%;
+            margin: 2%;
+        }
+        .form-table tr td{
+            padding: 10px;
+            /* border: 1px solid; */
+            text-align: center;
+            vertical-align: top;
+            text-align: center;
+        }
+        .form-table .image{
+            width: 40%;
+        }
+        .form-table tr td input[type=text],.form-table tr td input[type=number], .form-table tr td textarea{
+            width: 100%;
+        }
+        .form-table tr td input{
+            height: 30px;
+        }
+        .form-table image{
+            text-align: center;
+        }
+        .container .right .form {
+            margin: 14%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container .right .form form{
+            display: flex;
+            justify-content: center;
+        }
+        .form-table .label{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="company-logo"><img src="image/company-logo.jpg" alt=""></div>
+            <ul>
+                <li class="active"><i class="fal fa-tachometer-slowest"></i><a href="index.html">Dashboard</a></li> 
+                <li><i class="fal fa-laptop"></i><a href="computer.html">Computer</a></li> 
+                <li><i class="fal fa-chalkboard"></i><a href="projector.html">Projector</a></li> 
+                <li><i class="fal fa-tv"></i><a href="tv.html">TV</a></li> 
+                <li><i class="fal fa-print"></i><a href="printer.html">Printer</a></li> 
+                <li><i class="fal fa-copy"></i><a href="copier.html">Copier</a></li> 
+                <li><i class="fal fa-cauldron"></i><a href="rice_cooker.html">Rice Cooker</a></li> 
+                <li><i class="fal fa-compact-disc"></i><a href="dish_washer.html">Dishwasher</a></li> 
+                <li><i class="fal fa-temperature-low"></i><a href="refrigerator.html">refrigerator</a></li> 
+                <li><i class="fal fa-fan"></i><a href="air_conditioner.html">Air Conditioning</a></li> 
+                <li ><i class="fal fa-hot-tub"></i><a href="iron.html">Iron</a></li> 
+            </ul>
+        </div>
+        <div class="right">
+                <div class="top-bar-each">
+                    <div class="title-form-search">
+                        <form action="">
+                            <input type="text" name="" id="input-search" placeholder="Search">
+                            <i class="fas fa-search" id="icon-search" ></i>
+                        </form>
+                    </div>
+                    <div  class="group-option">
+                        <a href="" class="name">Name <i class="fas fa-arrow-down"></i></a>
+                        <a href=""  class="qty">Qty <i class="fas fa-arrow-down"></i></a>
+                        <a href=""  class="create">Save</a>
+                    </div>
+                </div>
+                <h1 class="title">Creat Product</h1>
+                <div class="form">
+                    <form action="" method="post">
+                        <table class="form-table">
+                            <tr>
+                                <td class="label"><label for="name">Name</label></td>
+                                <td><input type="text" name="name" ></td>
+                                <td><input type="file" name="image" onchange="readURL(this);"></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="qty">Qty</label></td>
+                                <td><input type="number" name="qty"></td>
+                                <td class="image" rowspan="2"><img src="image/default-image.jpg" id="image" width="200px"></td>
+                            </tr>
+                            <tr>
+                                <td class="label"><label for="description">Description</label></td>
+                                <td><textarea name="description" rows="5"></textarea></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+             function readURL(input) {
+                 console.log(1);
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
